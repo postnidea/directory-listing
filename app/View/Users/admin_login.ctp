@@ -1,6 +1,7 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
+        <?php echo $this->Flash->render(); ?>
         <?php echo $this->Flash->render('auth'); ?>
         <?php echo $this->Form->create('User'); ?>
         <?php echo $this->Form->input('username',array('div' =>'form-group','class'=>'form-control','placeholder'=>'username')); ?>

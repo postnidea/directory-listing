@@ -29,6 +29,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('bootstrap.min');
+    echo $this->Html->css('font-awesome.css');
 		echo $this->Html->css('style');
 		echo $this->Html->script('jquery.min');
 		echo $this->Html->script('bootstrap.min');
@@ -67,6 +68,7 @@ $userData = $this->Session->read('Auth.User');
                   <?php echo $userData['fullname']; ?>
                 </a>
                 <div class="dropdown-menu">
+                  <?php echo $this->Html->link('Settings','/users/logout', array('class' => 'dropdown-item')); ?>
                   <?php echo $this->Html->link('Logout','/users/logout', array('class' => 'dropdown-item')); ?>
                   
                 </div>

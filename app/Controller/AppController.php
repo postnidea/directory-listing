@@ -53,8 +53,10 @@ class AppController extends Controller {
         $this->Auth->allow('index', 'view','add');
         /*print_r($this->request->prefix);
         die;*/
+        
 
         if ($this->request->prefix == 'admin') {
+
             // Setting the layout for the admin.
             if ((isset($this->params['action']) && ($this->params['action'] == 'admin_login'))) {
                 $this->layout = 'admin_login';
@@ -63,11 +65,13 @@ class AppController extends Controller {
                 $this->layout = 'admin';
                 }
             }
+
+          $this->Auth->loginAction    = array('controller'=>'users','action'=>'login');
+          $this->Auth->loginRedirect  = array('controller'=>'dashboard','action'=>'index');
+          $this->Auth->logoutRedirect = array('controller'=>'users','action'=>'login');
       
-        } 
+        }      
 
     }
-
-
    
 }

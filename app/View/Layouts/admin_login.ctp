@@ -40,7 +40,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 </head>
 <body class="bg-dark">
 	<div class="container">
-			<?php echo $this->Flash->render(); ?>
 			<?php echo $this->fetch('content'); ?>
 	</div>
 	<?php //echo $this->element('sql_dump'); ?>

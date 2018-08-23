@@ -23,7 +23,11 @@
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
            
-                   <?php echo $this->Html->link('Logout','/users/logout', array('class' => 'btn btn-primary')); ?>
+                   <?php //echo $this->Html->link('Logout','/users/admin_logout', array('class' => 'btn btn-primary')); ?>
+                   <?php echo $this->Html->link('Sign Out',array(
+                          'controller' => 'users',
+                          'action' => 'admin_logout'
+                      ),array('class' => 'btn btn-primary')); ?>
           </div>
         </div>
       </div>

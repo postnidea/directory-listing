@@ -6,3 +6,6 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+.dashboard_main{ text-align: center; padding: 45px 0px 45px 0px;  }
+.dashboard_main i{ font-size: 45px; }
+.dashboard_main_link,.dashboard_main_link:hover{color:#000; text-decoration: none;}
